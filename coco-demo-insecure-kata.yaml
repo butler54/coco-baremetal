@@ -1,9 +1,9 @@
 apiVersion: v1
 kind: Pod
 metadata:
-  name: coco-demo-insecure-kata
+  name: coco-demo-insecure-kata-2
   labels:
-    app: coco-demo-insecure-kata
+    app: coco-demo-insecure-kata-2
   annotations:
     io.katacontainers.config.hypervisor.default_vcpus: "2"
     io.katacontainers.config.hypervisor.default_memory: "4096"

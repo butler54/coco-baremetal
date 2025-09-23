@@ -28,7 +28,6 @@ oc debug node/dell-per760-29.lab.eng.pek2.redhat.com
 
 sudo su
 
-
 podman run -it --privileged --pid=host quay.io/rh-ee-chbutler/coredumps:latest bash
 
 export POD_MAC=$FROM_ABOVE
@@ -63,6 +62,6 @@ PID=$(ps aux | grep qemu | grep -i "$POD_MAC" | awk '{print $2}')
 gcore $PID  
 
 strings core.$PID | grep -i MyMagicKeyIsABanana -c
-
+strings core.$PID | grep -i cMyMagicKeyIsABanana -c
 
 cat /proc/cpuinfo  | grep 'flags' | tr ' ' '\n' | grep "tdx"

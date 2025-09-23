@@ -9,7 +9,7 @@ metadata:
     io.katacontainers.config.hypervisor.default_memory: "4096"
 
 spec:
-  runtimeClassName: kata-cc-tdx
+  runtimeClassName: kata-cc
   initContainers:
   - name: fetch-key
     image: registry.access.redhat.com/ubi9/ubi:9.3
@@ -37,4 +37,3 @@ spec:
   - name: keys
     emptyDir:
       medium: Memory
-

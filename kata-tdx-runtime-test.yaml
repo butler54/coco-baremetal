@@ -6,12 +6,12 @@ metadata:
   name: test-cc-tdx
   namespace: default
 spec:
-  runtimeClassName: kata-cc-tdx
+  runtimeClassName: kata-cc
   containers:
   - args:
     - "20000"
     command:
     - sleep
-    image: busybox:1.28
+    image: quay.io/rh-ee-chbutler/coredumps:latest
     imagePullPolicy: IfNotPresent
     name: test
