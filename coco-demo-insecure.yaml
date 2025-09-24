@@ -4,9 +4,9 @@ metadata:
   name: coco-demo-insecure
   labels:
     app: coco-demo-insecure
-    # annotations:
-    #   io.katacontainers.config.hypervisor.default_vcpus: "2"
-    #   io.katacontainers.config.hypervisor.default_memory: "4096"
+  annotations:
+    io.katacontainers.config.hypervisor.default_vcpus: "2"
+    io.katacontainers.config.hypervisor.default_memory: "4096"
 spec:
   initContainers:
   - name: fetch-key
